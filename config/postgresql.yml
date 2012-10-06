@@ -1,0 +1,24 @@
+Default: &defaults
+  user: hello-yesod
+  password: hello-yesod
+  host: localhost
+  port: 5432
+  database: hello-yesod
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: hello-yesod_test
+  <<: *defaults
+
+Staging:
+  database: hello-yesod_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: hello-yesod_production
+  poolsize: 100
+  <<: *defaults
