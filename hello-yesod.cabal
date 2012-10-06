@@ -80,7 +80,6 @@ library
                  , aeson
                  , unordered-containers
 
-
 executable         hello-yesod
     if flag(library-only)
         Buildable: False

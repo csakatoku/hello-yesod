@@ -26,6 +26,12 @@ import qualified Web.Heroku
 -- Don't forget to add new modules to your cabal file!
 import Handler.Home
 
+import Data.HashMap.Strict as M
+import Data.Aeson.Types as AT
+#ifndef DEVELOPMENT
+import qualified Web.Heroku
+#endif
+
 -- This line actually creates our YesodSite instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see
 -- the comments there for more details.
@@ -62,7 +68,7 @@ canonicalizeKey ("dbname", val) = ("database", val)
 canonicalizeKey pair = pair
 
 toMapping :: [(Text, Text)] -> AT.Value
-toMapping xs = AT.Object $ M.fromList $ map (\(key, val) -> (key, AT.String val)) xs
+toMapping xs = AT.Object $ M.fromList $ Import.map (\(key, val) -> (key, AT.String val)) xs
 #endif
 
 combineMappings :: AT.Value -> AT.Value -> AT.Value
@@ -74,7 +80,7 @@ loadHerokuConfig = do
 #ifdef DEVELOPMENT
   return $ AT.Object M.empty
 #else
-  Web.Heroku.dbConnParams >>= return . toMapping . map canonicalizeKey
+  Web.Heroku.dbConnParams >>= return . toMapping . Import.map canonicalizeKey
 #endif
 
 -- for yesod devel
