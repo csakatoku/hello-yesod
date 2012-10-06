@@ -76,6 +76,10 @@ library
                  , directory                     >= 1.1        && < 1.2
                  , warp                          >= 1.3        && < 1.4
                  , data-default
+                 , heroku
+                 , aeson
+                 , unordered-containers
+
 
 executable         hello-yesod
     if flag(library-only)
