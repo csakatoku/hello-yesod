@@ -19,6 +19,7 @@ import Network.HTTP.Conduit (newManager, def)
 -- Import all relevant handler modules here.
 -- Don't forget to add new modules to your cabal file!
 import Handler.Home
+import Handler.Blog
 
 import Data.HashMap.Strict as M
 import Data.Aeson.Types as AT
