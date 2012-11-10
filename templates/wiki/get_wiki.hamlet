@@ -1,0 +1,5 @@
+<h2>Edit page
+<form method=post>
+  ^{form}
+  <div>
+    <input type=submit>

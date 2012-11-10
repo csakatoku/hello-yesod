@@ -2,6 +2,7 @@ User
     ident Text
     password Text Maybe
     UniqueUser ident
+
 Email
     email Text
     user UserId Maybe
@@ -13,3 +14,8 @@ Article
     content Html
     deriving
 
+WikiPage
+    title   Text
+    content Text
+    UniqueTitle title
+    deriving Show

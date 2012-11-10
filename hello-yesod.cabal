@@ -30,6 +30,7 @@ library
                      Settings.Development
                      Handler.Home
                      Handler.Blog
+                     Handler.Wiki
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -80,6 +81,7 @@ library
                  , heroku
                  , aeson
                  , unordered-containers
+                 , markdown
 
 executable         hello-yesod
     if flag(library-only)
