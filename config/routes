@@ -9,6 +9,8 @@
 /blog            BlogR    GET POST
 /blog/#ArticleId ArticleR GET
 
+/wiki/*Texts     WikiR    GET POST
+
 /comments CommentR POST
 
 /messages MessageR GET POST

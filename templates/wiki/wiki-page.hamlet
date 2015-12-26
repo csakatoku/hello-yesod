@@ -1,0 +1,6 @@
+<section>
+  <h2>Edit page #{title}
+  <form method=post action=@{WikiR ts} enctype=#{enctype}>
+    ^{form}
+    <div>
+      <input type=submit>

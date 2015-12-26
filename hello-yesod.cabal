@@ -23,6 +23,7 @@ library
                      Handler.Common
                      Handler.Home
                      Handler.Blog
+                     Handler.Wiki
                      Handler.Comment
                      Handler.Message
 
@@ -87,6 +88,7 @@ library
                  , time
                  , case-insensitive
                  , wai
+                 , markdown
 
 executable         hello-yesod
     if flag(library-only)
