@@ -6,6 +6,9 @@
 
 / HomeR GET POST
 
+/blog            BlogR    GET POST
+/blog/#ArticleId ArticleR GET
+
 /comments CommentR POST
 
 /messages MessageR GET POST
