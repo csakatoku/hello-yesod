@@ -1,0 +1,7 @@
+<h1.jumbotron>
+  Session
+
+<form method=post action=@{MessageR}>
+  My message is: #{message}
+  ^{widget}
+  <button .btn .btn-primary type="submit">Submit

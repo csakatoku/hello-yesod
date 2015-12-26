@@ -7,3 +7,5 @@
 / HomeR GET POST
 
 /comments CommentR POST
+
+/messages MessageR GET POST
